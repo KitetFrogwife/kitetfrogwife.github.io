@@ -1,0 +1,92 @@
+body {
+	background-color: #0B0E18;
+}
+
+h1 {
+	color: yellow;
+	font-family: lucida console;
+	font-size: 90px;
+}
+
+p {
+	color: white;
+	font-family: courier;
+}
+
+p.bigt {
+	color: white;
+	font-size: 35px;
+}
+
+a:link {
+		color: #1DA0ED;
+		text-decoration: none;
+}
+
+a:visited {
+		color: #FFA241;
+		text-decoration: none;
+}
+
+a:hover {
+		color: #7FFF00;
+		text-decoration: underline;
+}
+
+a:active {
+		color: #FFFF00;
+		text-decoration: underline;
+}
+
+/*for images*/
+
+img {
+  margin-left: 20px;
+}
+
+/*for icons*/
+
+p.centre {
+	display:block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 75%;
+}
+
+p.biglink {
+	font-size: 30px;
+	text-align: center;
+	background-color: #07457B;
+}
+
+div.descbox {
+		margin: auto; /*this should make it so the boxes are aligned within the screen as a whole*/
+		color: white;
+		font-family: arial;
+		font-size: 24px;
+		background-color: MidnightBlue;
+}
+
+table.kitet{
+	text-align: center;
+	background-color: darkmagenta
+}
+
+/* secondary style for guide pages */
+
+body.g {
+  background-color: MidnightBlue; 
+}
+
+p.g {
+  color: white;
+  font-family: arial;
+}
+
+h1.g {
+  color: cyan;
+  font-family: courier;
+  font-size: 60px;
+}
+
+

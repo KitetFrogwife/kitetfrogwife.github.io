@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style>
+            :root {
+                /* These variables exist so you can make quick and simple style changes without much CSS knowledge */
+
+                /* applies to all areas */
+                --font-family: courier;
+                --font-size: 18px;
+                --line-height: 1.3em;
+                --font-color: white;
+                --link-color: #FF0081;
+                --link-text-decoration: underline;
+
+                /* main content (between sidebars) */
+                --content-padding: 25px;
+                --content-bg-color: #000051;
+
+                /* header */
+                --header-height: 150px;
+                --header-background: url('sl/128_FWtile.png');
+                --header-margin-bottom: 0px;
+
+                /* sidebar */
+                --sidebar-margin: 10px;
+                --sidebar-width: 400px;
+                --sidebar-padding: 15px;
+                --sidebar-bg-color: #000051;
+
+                /* footer */
+                --footer-height: 30px;
+                --footer-bg-color: #000051;
+
+                /* navbar */
+                --navitems-alignment: center;
+                --space-between-navitems: 20px;
+                --navbar-margin-bottom: 10px;
+                --nav-bg-color: #000000;
+
+                /* container */
+                --container-width: 1200px;
+                --container-bg-color: #000000;
+
+                /* controls the gap between the content and the footer */
+                --row-gap: 5px;
+
+                /* To add scrollbars to your sidebars, just make the height a px value and change overflow to 'auto' */
+
+                --sidebar-height: 100%;
+                --sidebar-overflow: hidden;
+                --background-color: #000000;
+				--background-image: url("sl/128_frogwifeWall.png");
+            }
+
+            html,
+            body {
+                margin: 0;
+                padding: 0;
+                background-color: var(--background-color);
+                font-family: var(--font-family);
+                font-size: var(--font-size);
+                line-height: var(--line-height);
+                color: var(--font-color);
+				background-image: var(--background-image);
+            }
+
+            body a {
+                color: var(--link-color);
+                font-weight: bold;
+                text-decoration: var(--link-text-decoration);
+            }
+
+            #main-container {
+                max-width: var(--container-width);
+                margin: 0 auto;
+                background-color: var(--container-bg-color);
+				text-align: center;
+            }
+
+            .flex {
+                display: flex;
+                margin-bottom: var(--row-gap);
+            }
+
+            .content-wrap {
+                margin-top: var(--content-margin-top);
+            }
+
+            #content-container {
+                width: 60%;
+                margin-bottom: var(--row-gap);
+                background-color: var(--content-bg-color);
+            }
+
+            #left-sidebar {
+                width: var(--sidebar-width);
+                margin-right: var(--sidebar-margin);
+                margin-bottom: var(--row-gap);
+                height: var(--sidebar-height);
+                overflow: var(--sidebar-overflow);
+                background-color: var(--sidebar-bg-color);
+				text-align: center;
+            }
+
+            #right-sidebar {
+                width: var(--sidebar-width);
+                margin-left: var(--sidebar-margin);
+                margin-bottom: var(--row-gap);
+                height: var(--sidebar-height);
+                overflow: var(--sidebar-overflow);
+                background-color: var(--sidebar-bg-color);
+				text-align: center;
+            }
+
+            #header-contained {
+                height: var(--header-height);
+                margin-bottom: var(--header-margin-bottom);
+                background-image: var(--header-background);
+                background-position: center center;
+            }
+
+            #footer {
+                height: var(--footer-height);
+                text-align: center;
+                color: var(--font-color);
+                background-color: var(--footer-bg-color);
+            }
+
+            #header-full {
+                display: none;
+                height: var(--header-height);
+                margin-bottom: var(--header-margin-bottom);
+                background-image: var(--header-background);
+                background-position: center center;
+            }
+
+            #navbar-contained {
+                margin-bottom: var(--row-gap)
+            }
+
+            #navbar-full {
+                display: none;
+            }
+
+            .nav {
+                margin-left: 0;
+                text-align: var(--navitems-alignment);
+                margin-top: 0;
+                margin-bottom: var(--navbar-margin-bottom);
+                padding-top: 1em;
+                padding-bottom: 1em;
+                background-color: var(--nav-bg-color);
+            }
+
+            .nav li {
+                display: inline-block;
+                padding-right: var(--space-between-navitems);
+            }
+
+            .wrapper {
+                padding: var(--content-padding);
+                padding-top: var(--sidebar-padding);
+            }
+
+            .sidebar-wrapper {
+                padding: var(--sidebar-padding);
+                height: var(--sidebar-height);
+                overflow: var(--sidebar-overflow);
+            }
+
+            .footer-wrapper {
+                padding: 5px;
+            }
+
+            /* To keep your site RESPONSIVE, make sure this variable matches the width for --container-width UNLESS --container-width is 100% - if it's 100%, you'll need to manually input a breakpoint. */
+            @media only screen and (max-width: 800px) {
+                .flex {
+                    flex-wrap: wrap;
+                }
+
+                #left-sidebar {
+                    width: 100%;
+                    display: block;
+                    order: 2;
+                    margin-right: 0;
+                    margin-bottom: 10px;
+                }
+
+                #right-sidebar {
+                    width: 100%;
+                    display: block;
+                    order: 3;
+                    margin-left: 0;
+                }
+
+                #content-container {
+                    width: 100%;
+                    display: block;
+                    order: 1;
+                    margin-bottom: 10px;
+                }
+
+            }
+        </style>
+</head>
+<body>
+
+        <div id="header-full"></div>
+        <div id="navbar-full">
+            <ul class="nav">
+                <li><a href="index.html">Back to Kitet homepage</a></li>
+                <li><a href="https://kitet-frogwife.tumblr.com/">tumblr blog</a></li>
+                <li><a href="http://maps.secondlife.com/secondlife/Amazing%20Dreams/147/147/1501">Inworld SLURL</a></li>
+				<li><a href="https://www.flickr.com/people/192385363@N07/">Flickr</a></li>
+            </ul>
+        </div>
+        <div id="main-container">
+            <div id="header-contained"></div>
+            <div id="navbar-contained">
+                <ul class="nav">
+                    <li><a href="index.html">Back to Kitet Homepage</a></li>
+                    <li><a href="https://kitet-frogwife.tumblr.com/">tumblr blog</a></li>
+                    <li><a href="http://maps.secondlife.com/secondlife/Amazing%20Dreams/147/147/1501">Inworld SLURL</a></li>
+					<li><a href="https://www.flickr.com/people/192385363@N07/">Flickr</a></li>
+                </ul>
+            </div>
+            <div class="content-wrap flex alignment">
+                <div id="left-sidebar">
+                    <div class="sidebar-wrapper">
+						<p><img src="sl/sl_logoFW.png">
+						<p><a href="https://marketplace.secondlife.com/stores/197882"><b>MARKETPLACE LINK</b></a>
+						<p>FROG WIFE is a store for decor items, furniture, and small buildings, prioritizing a low poly style and optimized mesh.
+						<p>user: Kitet Resident
+						</div>
+                </div>
+                <div id="content-container">
+                    <div class="wrapper">
+						<p><b>IMPORTANT NOTE:</b>
+						<p>As of 2023, I'm actually basically on a (likely permanent) hiatus from making stuff for Second Life.
+						<P>It was fun, I learned a lot of my basics with modeling and texturing while doing it; it isn't going to pay my bills. I've been shifting my focus to game development for a while, and making stuff for SL takes way too much time and effort that I could be using for furthering a career.
+						<p>That said, I'm not closing my stores, and I'm keeping my inworld space up as long as I can, so if you'd like to visit the store, feel free. Just note my customer service will likely be much slower than it used to be. :')
+						<p>-=+=-
+						<p><b>PAST HAPPENINGS:</b>
+						<p>August 2 2022 - FROG WIFE released Amplitude Tables furniture mini-pack
+						<p>May 7 2022 - Caecilian was at Abnormality: Electro Rage
+						<p> February 2022 - FROG WIFE logo and packaging redesign; inworld store redesign; Pixel Art Skyboxes and Compact Store prefab kit release
+						<p>-=+=-
+						<p>Spring 2022 - Interested in adding more to this webpage. Wanting to add subpages for "guides" or casual articles relating to second life as a whole. Keep an eye on this space?
+					</div>
+                </div>
+                <div id="right-sidebar">
+                    <div class="sidebar-wrapper">
+						<p><img src="sl/sl_logoCAE.png"></p>
+						<p><a href="https://marketplace.secondlife.com/stores/207017?id=207017"><b>MARKETPLACE LINK</b></a>
+						<p>Caecilian is a store for wearable items, accessories, mods, and avatars. Everything is rendered in a bright colored cartoon style.
+						<p>user: kiwifroot Resident
+					</div>
+                </div>
+            </div>
+            <div id="footer">
+                <div class="footer-wrapper">:)</div>
+            </div>
+        </div>
+
+
+
+
+</body>
+</html>

@@ -36,6 +36,41 @@
 		  background-color: #04AA6D;
 		  color: white;
 		}
+	/*flexbox divs for unsorted icons*/
+
+		.section {
+			display: flex;
+		}
+		
+		.space {
+			display: flex;
+			flex: 1;
+		}
+		
+		.iconbox {
+			background-color: darkmagenta;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+			flex: 3;
+		}
+		
+		.iconbox > div {
+			margin: 10px;
+		}
+		
+		.toptext {
+			display: flex;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+		
+		.midtext {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 	</style>
 	<title>kitet frog</title>
 </head>
